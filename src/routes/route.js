@@ -3,10 +3,7 @@ const express = require('express');
 const router = express.Router();
 const urlController = require('../controller/urlController')
 
-router.get("/test",() => {
 
-console.log("akhwhdblq")
-})
 
 router.post("/url/shorten",urlController.createShortUrl )
 
