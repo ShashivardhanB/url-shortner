@@ -29,10 +29,7 @@ redisClient.on("connect", async function () {
     console.log("Connected to Redis..");
 });
 
-//1. connect to the server
-//2. use the commands :
-//Connection setup for redis
-// Promisify is used when you want to convert a callback function into a promise based function
+
 
 const SET_ASYNC = promisify(redisClient.SET).bind(redisClient);
 const GET_ASYNC = promisify(redisClient.GET).bind(redisClient);
@@ -118,6 +115,3 @@ const originalUrl = async function (req, res) {
 module.exports = { createShortUrl, originalUrl }
 
 
-
-// Least Frequently Used
-// ,"EX",30s
